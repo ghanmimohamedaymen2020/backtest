@@ -35,6 +35,8 @@ public class UserController {
 	}
 	
 	@PostMapping("/users")
+	@CrossOrigin(origins = "http://localhost:4200")
+
 	public User createUser(@RequestBody User user) {
 		return userRepository.save(user);
 	}
